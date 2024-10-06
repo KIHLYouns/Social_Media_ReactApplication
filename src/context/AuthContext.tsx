@@ -4,7 +4,7 @@ import { getCurrentUser } from "@/lib/appwrite/api";
 import { useNavigate } from "react-router-dom";
 
 // Initial user state
-const INITIAL_USER: IUser = {
+export const INITIAL_USER: IUser = {
 	id: "",
 	name: "",
 	username: "",
@@ -14,7 +14,7 @@ const INITIAL_USER: IUser = {
 };
 
 // Initial context state
-const INITIAL_STATE: IContextType = {
+export const INITIAL_STATE: IContextType = {
 	user: INITIAL_USER,
 	isAuthenticated: false,
 	isLoading: false,
