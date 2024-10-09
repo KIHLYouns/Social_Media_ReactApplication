@@ -1,5 +1,29 @@
 import { useMutation, useQuery, useQueryClient, useInfiniteQuery } from "@tanstack/react-query";
-import { createUser, signIn, signOut } from "@/lib/appwrite/api";
+import {
+	createUser,
+	saveUserToDatabase,
+	signIn,
+	getAccount,
+	getCurrentUser,
+	signOut,
+	createPost,
+	uploadFile,
+	getFilePreview,
+	deleteFile,
+	searchPosts,
+	getInfinitePosts,
+	getPostById,
+	updatePost,
+	deletePost,
+	likePost,
+	savePost,
+	deleteSavedPost,
+	getUserPosts,
+	getRecentPosts,
+	getUsers,
+	getUserById,
+	updateUser,
+} from "../appwrite/api";
 import { INewUser } from "@/types";
 
 export const useCreateUserMutation = () => {
@@ -19,3 +43,5 @@ export const useSignOutMutation = () => {
 		mutationFn: () => signOut(),
 	});
 };
+
+export const 

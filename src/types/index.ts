@@ -8,8 +8,8 @@ export type IUpdateUser = {
 	userId: string;
 	name: string;
 	bio: string;
-	imageId: string;
-	imageURL: URL | string;
+	imageID: string;
+	imageURL: string | URL;
 	file: File[];
 };
 
@@ -24,8 +24,8 @@ export type INewPost = {
 export type IUpdatePost = {
 	postId: string;
 	caption: string;
-	imageId: string;
-	imageURL: URL;
+	imageID: string;
+	imageURL: string | URL;
 	file: File[];
 	location?: string;
 	tags?: string;
@@ -36,7 +36,7 @@ export type IUser = {
 	name: string;
 	username: string;
 	email: string;
-	imageURL: string;
+	imageURL: string | URL;
 	bio: string;
 };
 
@@ -52,7 +52,7 @@ export type INewUserDB = {
 	email: string;
 	name: string;
 	username?: string;
-	imageURL: URL;
+	imageURL: string | URL;
 };
 
 export interface IContextType {
